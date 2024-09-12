@@ -1,3 +1,17 @@
+tasks = []
+
+def add_task(task):
+    tasks.append(task)
+    print(f'Task "{task}" added!')
+
+def view_tasks():
+    if tasks:
+        print("Your tasks: ")
+        for i, task in enumerate(tasks, 1):
+            print(f"{i}. {task}")
+    else:
+        print("No tasks to show.")
+
 def main():
     while True:
         print("\n To-Do List Menu:")
@@ -9,9 +23,10 @@ def main():
         choice = input("Choose an option: ")
 
         if choice == '1':
-            # TODO: add_task
-            pass
+            task = input("Enter the task: ")
+            add_task(task)
         elif choice == '2':
+            view_tasks()
             # TODO: view_task
             pass
         elif choice == '3':
