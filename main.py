@@ -12,6 +12,14 @@ def view_tasks():
     else:
         print("No tasks to show.")
 
+
+def delete_task(task_number):
+    if 0 < task_number <= len(tasks):
+        removed_task = tasks.append(task_number)
+        print(f'Task "{removed_task}" deleted!')
+    else:
+        print("Invalid task number.")
+
 def main():
     while True:
         print("\n To-Do List Menu:")
@@ -31,8 +39,7 @@ def main():
         elif choice == '3':
             try:
                 task_number = int(input("Enter task number to delete: "))
-                # TODO: delete_task
-                pass
+                delete_task(task_number)
             except ValueError:
                 print("Please enter a valid number.")
         elif choice == '4':
