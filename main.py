@@ -8,7 +8,7 @@ def main():
 
         choice = input("Choose an option: ")
 
-        if chioce == '1':
+        if choice == '1':
             # TODO: add_task
             pass
         elif choice == '2':
@@ -19,8 +19,9 @@ def main():
             pass
         elif choice == '4':
             print("Goodbye")
+            break
         else:
             print("Invalid choice. Please choose a valid option.")
 
 if __name__ == "__main__":
-    pass
+    main()
