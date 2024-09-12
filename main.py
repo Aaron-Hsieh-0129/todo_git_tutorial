@@ -27,11 +27,14 @@ def main():
             add_task(task)
         elif choice == '2':
             view_tasks()
-            # TODO: view_task
             pass
         elif choice == '3':
-            # TODO: delete_task
-            pass
+            try:
+                task_number = int(input("Enter task number to delete: "))
+                # TODO: delete_task
+                pass
+            except ValueError:
+                print("Please enter a valid number.")
         elif choice == '4':
             print("Goodbye")
             break
